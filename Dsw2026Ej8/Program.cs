@@ -1,6 +1,7 @@
 ﻿using Dsw2026Ej8.problema_n_2;
 using Dsw2026Ej8.problema_n_3;
 using Dsw2026Ej8.problema_n_4;
+using Dsw2026Ej8.problema_n_5;
 
 namespace Dsw2026Ej8
 {
@@ -8,16 +9,16 @@ namespace Dsw2026Ej8
     {
         static void Main(string[] args)
         {
-            Problema4 problema4 = new Problema4();
+            Problema5 problema5 = new Problema5();
 
-            double resultado1 = problema4.CalcularPromedio(8, null, 10);
+            Sale ventaMinorista = new RetailSale(1000m);
+            Sale ventaMayorista = new WholesaleSale(1000m);
+
+            decimal resultado1 = problema5.ObtenerImporteFinal(ventaMinorista);
+            decimal resultado2 = problema5.ObtenerImporteFinal(ventaMayorista);
+
             Console.WriteLine(resultado1);
-
-            double resultado2 = problema4.CalcularPromedio(null, null, null);
             Console.WriteLine(resultado2);
-
-            double resultado3 = problema4.CalcularPromedio(8, -1, 20);
-            Console.WriteLine(resultado3);
         }
     }
 }
