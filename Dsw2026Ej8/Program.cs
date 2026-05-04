@@ -1,4 +1,5 @@
 ﻿using Dsw2026Ej8.problema_n_2;
+using Dsw2026Ej8.problema_n_3;
 
 namespace Dsw2026Ej8
 {
@@ -6,14 +7,15 @@ namespace Dsw2026Ej8
     {
         static void Main(string[] args)
         {
-            Problema2 helper2 = new Problema2();
+            Problema3 helper3 = new Problema3();
 
-            string resumen1 = helper2.CrearResumenVenta(500, "Monitor 24''", 2, 120000m);
-            Console.WriteLine($"Venta 1: {resumen1}");
-            string resumen2 = helper2.CrearResumenVenta(501, "Mouse Gamer", 0, 15000m);
-            Console.WriteLine($"Venta 2: {resumen2}");
+            Product miProducto = new Product { Description = "Descripción Original" };
+            int miNumero = 10;
 
+            string resultado = helper3.CompararCopias(miNumero, miProducto);
 
+            Console.WriteLine($"Resultado del método: {resultado}");
+            
         }
     }
 }
