@@ -1,18 +1,19 @@
-﻿namespace Dsw2026Ej8
+﻿using Dsw2026Ej8.problema_n_2;
+
+namespace Dsw2026Ej8
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            ProductHelper helper = new ProductHelper();
+            Problema2 helper2 = new Problema2();
 
-            long code = 777;
-            string description = "gomitas";
-            decimal price = 1200.50m;
+            string resumen1 = helper2.CrearResumenVenta(500, "Monitor 24''", 2, 120000m);
+            Console.WriteLine($"Venta 1: {resumen1}");
+            string resumen2 = helper2.CrearResumenVenta(501, "Mouse Gamer", 0, 15000m);
+            Console.WriteLine($"Venta 2: {resumen2}");
 
-            String resultado = helper.ObtenerEtiquetaProducto(code, description, price);
 
-            Console.WriteLine(resultado);
         }
     }
 }
