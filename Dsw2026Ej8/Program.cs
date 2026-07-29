@@ -10,8 +10,13 @@ namespace Dsw2026Ej8
     {
         static void Main(string[] args)
         {
-            Problema6 problema6 = new Problema6();
+            Problema5 problema5 = new Problema5();
+            Sale ventaMinorista = new RetailSale(1000m);
+            Sale ventaMayorista = new WholesaleSale(1000m);
+            Console.WriteLine($"RetailSale: {problema5.ObtenerImporteFinal(ventaMinorista)}");
+            Console.WriteLine($"WholesaleSale: {problema5.ObtenerImporteFinal(ventaMayorista)}");
 
+            Problema6 problema6 = new Problema6();
             string codigoEjemplo = " ab 123 x ";
             string resultado1 = problema6.NormalizarCodigoProducto(codigoEjemplo);
             Console.WriteLine($"Prueba Ejemplo: {resultado1}");
